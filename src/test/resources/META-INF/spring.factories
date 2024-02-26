@@ -1,2 +1,2 @@
-org.springframework.test.context.ContextCustomizerFactory = cms.config.\
+org.springframework.test.context.ContextCustomizerFactory = nevms.config.\
     SqlTestContainersSpringContextCustomizerFactory

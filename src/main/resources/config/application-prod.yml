@@ -17,7 +17,7 @@ logging:
   level:
     ROOT: INFO
     tech.jhipster: INFO
-    cms: INFO
+    nevms: INFO
 
 management:
   prometheus:
@@ -33,7 +33,7 @@ spring:
       enabled: false
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:mysql://localhost:3306/CMS?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3306/NEVMS?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&createDatabaseIfNotExist=true
     username: root
     password:
     hikari:
@@ -57,7 +57,7 @@ spring:
 
 # ===================================================================
 # To enable TLS in production, generate a certificate using:
-# keytool -genkey -alias cms -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore keystore.p12 -validity 3650
+# keytool -genkey -alias nevms -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore keystore.p12 -validity 3650
 #
 # You can also use Let's Encrypt:
 # See details in topic "Create a Java Keystore (.JKS) from Let's Encrypt Certificates" on https://maximilian-boehm.com/en-gb/blog
@@ -104,7 +104,7 @@ jhipster:
         # - In the Consul configserver
         # - In a separate `application-prod.yml` file, in the same folder as your executable JAR file
         # - In the `JHIPSTER_SECURITY_AUTHENTICATION_JWT_BASE64_SECRET` environment variable
-        base64-secret: YTA0YzlmMjkwZTQ4MzliZTFmYTAyYTcwNWRmY2FlNmE4YWRhYzVlN2JlZTI3YjE3NjBmOWZjMDM3N2VkYjg2M2E3MGU0MzRhNmJlY2Y0MGM3ODhmZDMyNjQyYmE5ZTBmZTQ3NTM1M2VjZmYyODliYWU0ODYwYjE4ZjJiYjk4YmU=
+        base64-secret: YTllODRmM2Q3ZGU1M2FhMWM4ZjQxODRhZmE0YWU5ZTljNWIwZTRhODA3NzQ5MGYxODYyMjgyZjAyZjEyM2U4YjE1YWI0ZDY1YWZkNWMyZjk5ZjAxMWMwNzg1ZjUyZWFiOTc4MTgzYmQ5M2I0YzNjMmY4NTBiY2MxZDEyNDgxYmI=
         # Token is valid 24 hours
         token-validity-in-seconds: 86400
         token-validity-in-seconds-for-remember-me: 2592000

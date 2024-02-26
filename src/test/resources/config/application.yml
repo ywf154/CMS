@@ -15,7 +15,7 @@
 
 spring:
   application:
-    name: CMS
+    name: NEVMS
   # Replace by 'prod, faker' to add the faker context and have sample data loaded in production
   liquibase:
     contexts: test
@@ -30,13 +30,13 @@ spring:
     basename: i18n/messages
   task:
     execution:
-      thread-name-prefix: cms-task-
+      thread-name-prefix: nevms-task-
       pool:
         core-size: 1
         max-size: 50
         queue-capacity: 10000
     scheduling:
-      thread-name-prefix: cms-scheduling-
+      thread-name-prefix: nevms-scheduling-
       pool:
         size: 20
   thymeleaf:
@@ -53,9 +53,9 @@ server:
 # ===================================================================
 jhipster:
   clientApp:
-    name: 'cmsApp'
+    name: 'nevmsApp'
   mail:
-    from: CMS@localhost.com
+    from: NEVMS@localhost.com
     base-url: http://127.0.0.1:8080
   logging:
     # To test json console appender
@@ -69,7 +69,7 @@ jhipster:
     authentication:
       jwt:
         # This token must be encoded using Base64 (you can type `echo 'secret-key'|base64` on your command line)
-        base64-secret: YTA0YzlmMjkwZTQ4MzliZTFmYTAyYTcwNWRmY2FlNmE4YWRhYzVlN2JlZTI3YjE3NjBmOWZjMDM3N2VkYjg2M2E3MGU0MzRhNmJlY2Y0MGM3ODhmZDMyNjQyYmE5ZTBmZTQ3NTM1M2VjZmYyODliYWU0ODYwYjE4ZjJiYjk4YmU=
+        base64-secret: YTllODRmM2Q3ZGU1M2FhMWM4ZjQxODRhZmE0YWU5ZTljNWIwZTRhODA3NzQ5MGYxODYyMjgyZjAyZjEyM2U4YjE1YWI0ZDY1YWZkNWMyZjk5ZjAxMWMwNzg1ZjUyZWFiOTc4MTgzYmQ5M2I0YzNjMmY4NTBiY2MxZDEyNDgxYmI=
         # Token is valid 24 hours
         token-validity-in-seconds: 86400
         token-validity-in-seconds-for-remember-me: 86400
